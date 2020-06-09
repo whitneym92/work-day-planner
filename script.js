@@ -4,7 +4,7 @@ $(document).ready(function() {
     var test = false;
   
     // get times from moment
-    var now = moment().format('MMMM Do YYYY');
+    var now = moment().format('dddd, MMMM Do YYYY');
   
     // commented out for test in non-standard hours
     var nowHour24 = moment().format('H');
@@ -156,11 +156,6 @@ $(document).ready(function() {
   
       planTextArr[$index] = $value;
   
-  
-      if (test) { console.log('value ', $value); }
-      if (test) { console.log('index ', $index); }
-      if (test) { console.log('click pta after '+ planTextArr); }
-  
       // remove shawdow pulse class
       $(`#saveid-${$index}`).removeClass('shadowPulse');
       localStorage.setItem("storedPlans", JSON.stringify(planTextArr));
@@ -168,11 +163,7 @@ $(document).ready(function() {
     
     // function to color save button on change of input
     $(document).on('change','input', function(event) {
-      event.preventDefault();  
-      if (test) { console.log('onChange'); }
-      if (test) { console.log('id', $(this).attr('hour-index')); }
-  
-      // neeed to check for save button
+      event.preventDefault(); 
   
       var i = $(this).attr('hour-index');
   
