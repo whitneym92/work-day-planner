@@ -32,7 +32,6 @@ $(document).ready(function() {
       // this should only occur on first time the app is loaded in the browser
       // helpfully remind user that lunch is important
       planTextArr = new Array(9);
-      planTextArr[2] = "Don't forget to eat lunch!";
     }
   
   
