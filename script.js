@@ -31,4 +31,23 @@ $(document).ready(function() {
     }
 
     if (test) { console.log("full array of planned text", planTextArr); }
+
+    //set a variable referencing planner element
+    var $plannerDiv = $('plannerContainer');
+    //clear existing element
+    $plannerDiv.empty();
+
+    if (test) { console.log("current time", nowHour12); }
+
+    //building calender with rows
+    for (let hour = 9; hour <= 17; hour++) {
+        let index = hour - 9;
+        
+        //heres the rows
+        var $rowDiv = $('<div>');
+        $rowDiv.addClass('row');
+        $rowDiv.addClass('plannerRow');
+        $rowDiv.attr('hour-index', hour);
+        
+    }
 });
